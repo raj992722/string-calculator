@@ -38,5 +38,9 @@ describe("StringCalculator", ()=>{
         expect(calculator.add("//;\n1;2")).toBe(3);
         expect(calculator.add("//*\n1*2*3")).toBe(6);
         
+    });
+
+    test("add: shoulkd still support default delimiters when no custom one is specified",()=>{
+        expect(calculator.add('1,2\n3')).toBe(6);
     })
 })
