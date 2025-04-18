@@ -42,5 +42,9 @@ describe("StringCalculator", ()=>{
 
     test("add: shoulkd still support default delimiters when no custom one is specified",()=>{
         expect(calculator.add('1,2\n3')).toBe(6);
-    })
+    });
+
+    test("add: should throw an execption fo negative numbers",()=>{
+        expect(()=>calculator.add("1,-2,3")).toThrow("negative numbers not allowed");
+    });
 })
