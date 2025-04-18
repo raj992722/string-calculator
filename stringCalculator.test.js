@@ -51,5 +51,10 @@ describe("StringCalculator", ()=>{
     test("add: should throw an exception listing all negative numbers found",()=>{
         expect(()=>calculator.add("1,-2,-3,4")).toThrow("negative numbers not allowed -2,-3");
         expect(()=>calculator.add("//;\n1;-2;5;-10")).toThrow("negative numbers not allowed -2,-10");
+    });
+
+    test("add: should not throw for zero or positive numbers",()=>{
+        expect(()=>calculator.add("1,2,0")).not.toThrow();
+        expect(calculator.add("1,2,0")).toBe(3); // ensure still correct
     })
 })
