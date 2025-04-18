@@ -25,6 +25,12 @@ describe("StringCalculator", ()=>{
 
     test("add: should handle any amount of comma-separated numbers",()=>{
         expect(calculator.add("1,2,3,4,5")).toBe(15);
-        expect(calculator.add("10,20,30,5")).toBe(65)
+        expect(calculator.add("10,20,30,5")).toBe(65);
+    });
+
+    test('add: should handle newlines between numbers',()=>{
+        expect(calculator.add("1\n2,3")).toBe(6);
+        expect(calculator.add("1,2\n3")).toBe(6);
+        expect(calculator.add("5\n5\n5")).toBe(15)
     })
 })

@@ -15,7 +15,7 @@ class StringCalculator {
         },0)
 
 
-        return sum;
+        
     }
 }
 
