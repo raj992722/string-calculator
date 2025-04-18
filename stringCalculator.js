@@ -11,7 +11,7 @@ class StringCalculator {
         // }
         // using reduce for summation
         return numberArray.reduce((sum,numStr)=>{
-            return sum+parseInt(numStr,10);
+            return sum + parseInt(numStr,10);
         },0)
 
 

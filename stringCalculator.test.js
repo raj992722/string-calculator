@@ -21,5 +21,10 @@ describe("StringCalculator", ()=>{
     test("add: should return the sum for two comma-separated numbers",()=>{
         expect(calculator.add('1,5')).toBe(6);
         expect(calculator.add("10,2")).toBe(12);
+    });
+
+    test("add: should handle any amount of comma-separated numbers",()=>{
+        expect(calculator.add("1,2,3,4,5")).toBe(15);
+        expect(calculator.add("10,20,30,5")).toBe(65)
     })
 })
