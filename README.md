@@ -31,11 +31,11 @@ A simple implementation of a string calculator in JavaScript, designed to handle
 ## Usage
 
 
-```markdown
+
 1. Run the calculator script:
-    ```bash
-    node stringCalculator.js
-    ```
+      ```bash
+      node stringCalculator.js
+      ```
 
 2. Pass a string of numbers as input:
     ```javascript
@@ -44,6 +44,7 @@ A simple implementation of a string calculator in JavaScript, designed to handle
     ```
 
 3. Use custom delimiters:
+
     ```javascript
     console.log(calculator.add("//;\n1;2;3")); // Outputs: 6
     ```
@@ -73,4 +74,3 @@ Run the test suite to ensure all features work as expected:
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-```
