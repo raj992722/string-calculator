@@ -3,6 +3,7 @@ class StringCalculator {
     _parseAndSum(numberString, delimiterRegex){
         const numberArray = numberString.split(delimiterRegex);
         let sum =0;
+        let negatives=[];
         
         for(const numStr of numberArray){
             const trimmedStr = numStr.trim();
@@ -10,8 +11,16 @@ class StringCalculator {
             const num = parseInt(trimmedStr,10);
 
             if(isNaN(num)) continue;
+            if(num < 0){
+                negatives.push(num);
+            }else{
 
-            sum+=num;
+                sum+=num;
+            }
+
+        }
+        if(negatives.length > 0){
+            throw new Error(`negative numbers not allowed ${negatives.join(",")}`);
         }
 
         return sum;
